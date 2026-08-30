@@ -1,0 +1,689 @@
+/* =========================================================
+   RSS READER
+   MODERN DIGITAL SIGNAGE STYLE
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    height: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+}
+
+
+body {
+
+    background: #080d14;
+
+    font-family:
+        BKoodakBold,
+        Tahoma,
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   RTL
+   ========================================================= */
+
+html {
+
+    direction: rtl;
+
+}
+
+
+body {
+
+    direction: rtl;
+
+}
+
+
+.swiper-container {
+
+    direction: rtl;
+
+}
+
+
+h2,
+h3 {
+
+    direction: rtl;
+
+}
+
+
+/* =========================================================
+   MAIN HERO
+   ========================================================= */
+
+.hero-slider {
+
+    width: 100% !important;
+
+    height: 100vh !important;
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.hero-slider .swiper-container {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+}
+
+
+.hero-slider .swiper-wrapper {
+
+    height: 100%;
+
+}
+
+
+.hero-slider .swiper-slide {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: #fff;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.hero-slider .slide-inner {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    z-index: 1;
+
+    background-color: #101722;
+
+    background-repeat: no-repeat;
+
+    background-position: center center;
+
+    background-size: cover;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+   ========================================================= */
+
+.hero-slider .slide-inner::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(4, 8, 14, 0.08) 0%,
+
+            rgba(4, 8, 14, 0.05) 45%,
+
+            rgba(4, 8, 14, 0.72) 100%
+
+        );
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.hero-slider .container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1440px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding:
+
+        40px
+
+        clamp(35px, 6vw, 110px)
+
+        95px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: flex-start;
+
+    text-align: right;
+
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.hero-slider .slide-text {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    position: relative;
+
+    margin: 0;
+
+    padding: 0;
+
+    direction: rtl;
+
+    text-align: right;
+
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.hero-slider .slide-text h2 {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin:
+
+        0
+
+        0
+
+        24px;
+
+    padding:
+
+        0
+
+        22px
+
+        0
+
+        0;
+
+    background: transparent !important;
+
+    color: #ffffff !important;
+
+    font-family:
+
+        BKoodakBold,
+
+        Tahoma,
+
+        sans-serif;
+
+    font-size:
+
+        clamp(
+
+            40px,
+
+            4.1vw,
+
+            74px
+
+        );
+
+    font-weight: normal;
+
+    line-height: 1.35;
+
+    letter-spacing: 0;
+
+    text-align: right;
+
+    direction: rtl;
+
+    overflow-wrap: break-word;
+
+    word-break: normal;
+
+    border-right:
+
+        4px
+
+        solid
+
+        #dca43e;
+
+    text-shadow:
+
+        0
+
+        3px
+
+        12px
+
+        rgba(0, 0, 0, 0.65);
+
+}
+
+
+/* =========================================================
+   DATE / SOURCE
+   ========================================================= */
+
+.hero-slider .slide-text h3 {
+
+    display: block;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin: 0;
+
+    padding:
+
+        8px
+
+        18px;
+
+    border-right:
+
+        3px
+
+        solid
+
+        #dca43e;
+
+    background:
+
+        rgba(
+
+            7,
+
+            12,
+
+            18,
+
+            0.42
+
+        );
+
+    color:
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.88
+
+        );
+
+    font-family:
+
+        BKoodakBold,
+
+        Tahoma,
+
+        sans-serif;
+
+    font-size:
+
+        clamp(
+
+            18px,
+
+            1.25vw,
+
+            26px
+
+        );
+
+    font-weight: normal;
+
+    line-height: 1.7;
+
+    direction: rtl;
+
+    text-align: right;
+
+    border-radius:
+
+        4px
+
+        0
+
+        0
+
+        4px;
+
+}
+
+
+/* =========================================================
+   SLIDE IMAGE
+   ========================================================= */
+
+.slide-image {
+
+    display: none !important;
+
+}
+
+
+/* =========================================================
+   OLD LABELS
+   ========================================================= */
+
+.nameOfsite,
+.dayOfnews {
+
+    display: none !important;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.hero-slider .swiper-button-prev,
+.hero-slider .swiper-button-next {
+
+    display: none !important;
+
+}
+
+
+/* =========================================================
+   PAGINATION
+   ========================================================= */
+
+.hero-slider .swiper-pagination {
+
+    position: absolute;
+
+    z-index: 20;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: auto;
+
+    width: 100%;
+
+    height: 3px;
+
+}
+
+
+.hero-slider
+.swiper-pagination-progressbar {
+
+    background:
+
+        rgba(
+
+            255,
+
+            255,
+
+            255,
+
+            0.12
+
+        );
+
+}
+
+
+.hero-slider
+.swiper-pagination-progressbar-fill {
+
+    background:
+
+        #dca43e !important;
+
+}
+
+
+/* =========================================================
+   FONT
+   ========================================================= */
+
+.font {
+
+    font-family:
+
+        BKoodakBold,
+
+        Tahoma,
+
+        sans-serif;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+
+    .hero-slider .container {
+
+        padding-left: 55px;
+
+        padding-right: 55px;
+
+        padding-bottom: 90px;
+
+    }
+
+
+    .hero-slider .slide-text {
+
+        max-width: 100%;
+
+    }
+
+
+    .hero-slider .slide-text h2 {
+
+        max-width: 100%;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+
+    .hero-slider .container {
+
+        padding:
+
+            30px
+
+            25px
+
+            65px;
+
+    }
+
+
+    .hero-slider .slide-text h2 {
+
+        font-size: 34px;
+
+        line-height: 1.45;
+
+        margin-bottom: 16px;
+
+        padding-right: 12px;
+
+        border-right-width: 3px;
+
+    }
+
+
+    .hero-slider .slide-text h3 {
+
+        font-size: 16px;
+
+        padding:
+
+            7px
+
+            12px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+
+    .hero-slider .container {
+
+        padding:
+
+            20px
+
+            15px
+
+            50px;
+
+    }
+
+
+    .hero-slider .slide-text h2 {
+
+        font-size: 25px;
+
+        line-height: 1.5;
+
+    }
+
+
+    .hero-slider .slide-text h3 {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+    .hero-slider .slide-inner {
+
+        transition: none !important;
+
+    }
+
+}

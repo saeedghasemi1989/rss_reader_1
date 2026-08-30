@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RSS Reader</title>
+
+
+    <!-- =====================================================
+         Swiper CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/swiper.min.css"
+    >
+
+
+    <!-- =====================================================
+         Font Awesome
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         Main Style
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <style>
+
+        @font-face {
+
+            font-family:
+                BKoodakBold;
+
+            src:
+                url("font/BKoodakBold.ttf")
+                format("truetype");
+
+            font-weight:
+                normal;
+
+            font-style:
+                normal;
+
+        }
+
+
+        html,
+        body {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            margin:
+                0;
+
+            padding:
+                0;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        body {
+
+            direction:
+                rtl;
+
+            font-family:
+                BKoodakBold,
+                sans-serif;
+
+        }
+
+
+        /*
+         * محدوده اصلی ویجت
+         */
+
+        .hero-slider {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            height:
+                100vh;
+
+            min-height:
+                100vh;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        /*
+         * Swiper
+         */
+
+        .swiper-container {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .swiper-wrapper {
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+        }
+
+
+        .swiper-slide {
+
+            position:
+                relative;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        /*
+         * جلوگیری از بیرون‌زدگی محتوای متن
+         */
+
+        .swiper-slide .container {
+
+            width:
+                100%;
+
+            max-width:
+                1440px;
+
+            margin-right:
+                auto;
+
+            margin-left:
+                auto;
+
+            box-sizing:
+                border-box;
+
+        }
+
+
+        /*
+         * تصویر داخلی RSS در این طراحی استفاده نمی‌شود.
+         * بک‌گراند توسط JS روی slide-inner قرار می‌گیرد.
+         */
+
+        .slide-image {
+
+            display:
+                none !important;
+
+        }
+
+
+        /*
+         * کنترل Progress Bar
+         */
+
+        .swiper-pagination {
+
+            z-index:
+                20;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HERO / RSS
+         ===================================================== -->
+
+    <section
+        class="hero-slider hero-style font"
+    >
+
+        <div
+            class="swiper-container"
+        >
+
+
+            <div
+                class="swiper-wrapper"
+                id="slideContainer"
+            >
+            </div>
+
+
+            <!-- Progress -->
+
+            <div
+                class="swiper-pagination"
+            ></div>
+
+
+            <!-- Navigation
+                 فعلاً مخفی است -->
+
+            <div
+                class="swiper-button-next"
+                style="display:none;"
+            ></div>
+
+
+            <div
+                class="swiper-button-prev"
+                style="display:none;"
+            ></div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LIBRARIES
+         ===================================================== -->
+
+
+    <!--
+        jQuery
+        از CDN برای جلوگیری از خطای ERR_FAILED
+        فایل محلی
+    -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
+
+
+    <!--
+        Swiper
+        بعد از jQuery
+    -->
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"
+    ></script>
+
+
+    <!-- =====================================================
+         Rayboard
+         ===================================================== -->
+
+    <script
+        src="https://play.rayboard.ir/scripts/library/v2.6/ComponentHelper.js"
+    ></script>
+
+
+    <script
+        src="https://play.rayboard.ir/scripts/library/v2.6/DataLibrary.js"
+    ></script>
+
+
+    <!-- =====================================================
+         SCRIPT.JS
+         =====================================================
+
+         Cache Busting:
+         با تغییر عدد نسخه، مرورگر فایل قبلی را استفاده نمی‌کند.
+    -->
+
+    <script
+        src="js/script.js?v=20260830-01"
+    ></script>
+
+
+</body>
+
+</html>
